@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/res/script.js"></script>
+
+    <title>ToDo-Handler</title>
+</head>
+<body>
+<header class="container text-center mb-4">
+    <h1>ToDo-Handler</h1>
+</header>
+
+<section id="alert" class="container text-center mb-4">
+</section>
+
+<section id="signIn" class="container mb-4">
+    <h2>Anmeldung</h2>
+    <form id="signInForm">
+        <div class="form-group">
+            <label for="signInName">Nutzername:</label>
+            <input id="signInName" name="signInName" type="text" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="signInPass">Passwort:</label>
+            <input id="signInPass" name="signInPass" type="password" class="form-control" required>
+        </div>
+        <input type="submit" value="Anmelden" class="btn btn-primary">
+    </form>
+</section>
+
+<section id="signOut" class="container mb-4">
+    <h2>Abmeldung</h2>
+    <form id="signOutForm">
+        <input type="submit" value="Abmelden" class="btn btn-primary">
+    </form>
+</section>
+
+<section id="tasks" class="container">
+    <h2>ToDo-Liste</h2>
+    <div class="mb-4">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Task</th>
+                <th scope="col">Fälligkeit</th>
+                <th scope="col">Erledigt</th>
+                <th scope="col">Update</th>
+            </tr>
+            </thead>
+            <tbody id="tasksTable">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="mb-4">
+        <form id="formAddTask">
+            <div class="form-group">
+                <label for="taskName">Task:</label>
+                <input id="taskName" name="taskName" type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="taskDate">Fälligkeit:</label>
+                <input id="taskDate" name="taskDate" type="date" class="form-control" required>
+            </div>
+            <input type="submit" value="Hinzufügen" class="btn btn-primary">
+        </form>
+    </div>
+</section>
+
+</body>
+</html>
